@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login • MASTER'S PORTFOLIO</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-body">
+
+<!-- PRELOADER -->
+<div id="preloader">
+    <div class="loader-text">MASTER'S NILO CREATION</div>
+    <div class="loader-bar"></div>
+</div>
+
+<canvas id="particles"></canvas>
+
+<div class="login-container">
+    <h1 class="cyber-title">MASTER NILO</h1>
+
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+
+        <button type="submit" class="btn">LOGIN</button>
+        <p class="error" id="errorMessage"></p>
+    </form>
+
+    <!-- Sign Up Button -->
+    <div class="signup-container">
+        <button class="btn signup-btn">SIGN UP</button>
+    </div>
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/particles.js"></script>
+
+<script>
+window.addEventListener("load", () => {
+    const pre = document.getElementById("preloader");
+    pre.style.opacity = "0";
+    setTimeout(() => { pre.style.display = "none"; }, 600);
+});
+</script>
+
+</body>
+</html>

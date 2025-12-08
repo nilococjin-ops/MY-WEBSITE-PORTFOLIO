@@ -1,0 +1,373 @@
+/* ===============================
+   CYBER SAMURAI GLOBAL STYLE
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Background Cyber Grid */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      linear-gradient(0deg, rgba(255,0,0,0.4) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,0,0,0.4) 1px, transparent 1px);
+    background-size: 45px 45px;
+    z-index: -3;
+}
+
+/* Particle Canvas */
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+/* ===============================
+   PRELOADER
+================================= */
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 3.5s ease;
+}
+
+.loader-text {
+    font-size: 2.5rem;
+    color: #27ffac;
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-shadow: 0 0 12px #27ffac, 0 0 22px #27ffac;
+    animation: glitch 1s infinite alternate;
+}
+
+@keyframes glitch {
+    0% { opacity: 1; transform: skew(0deg); }
+    30% { opacity: 0.8; transform: skew(-6deg); }
+    50% { opacity: 1; transform: skew(5deg); }
+    80% { opacity: 0.9; transform: skew(-3deg); }
+    100% { opacity: 1; transform: skew(0deg); }
+}
+
+.loader-bar {
+    width: 260px;
+    height: 6px;
+    margin-top: 18px;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.loader-bar::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #27ffe6;
+    display: block;
+    animation: load 5.5s linear infinite;
+}
+
+@keyframes load {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ===============================
+   HEADER + NAVIGATION
+================================= */
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,0,0,0.5);
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #27ffe6;
+    text-shadow: 0 0 12px #27ffac;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover, nav .active {
+    color: #27ffe6;
+    text-shadow: 0 0 12px blue;
+}
+
+.btn-logout {
+    background: none;
+    color: #27ffac;
+    border: 1px solid #27ffe6;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-logout:hover {
+    background: #27ffe6;
+    color: black;
+}
+
+/* ===============================
+   LOGIN PAGE
+================================= */
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 360px;
+    background: rgba(0,0,0,0.7);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #27ffe6;
+    box-shadow: 0 0 25px #27ffe6;
+}
+
+.cyber-title {
+    text-align: center;
+    color: #27ffac;
+    margin-bottom: 20px;
+    text-shadow: 0 0 12px white;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 1rem;
+    background: black;
+    border: 1px solid #27ffe6;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 12px #27ffe6;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: white;
+}
+
+.error {
+    text-align: center;
+    color: rgb(255, 80, 80);
+    margin-top: 10px;
+}
+
+/* ===============================
+   HOME / HERO
+================================= */
+
+.hero {
+    padding: 120px 40px;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    color: #27ffac;
+    margin-top: 15px;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #27ffac;
+}
+
+/* ===============================
+   CONTENT PAGES
+================================= */
+
+.content {
+    padding: 60px;
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+}
+
+.cyber-sub {
+    margin-top: 25px;
+    color: #27ffe6;
+}
+
+.list {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.list li {
+    margin: 5px 0;
+}
+
+/* ===============================
+   PROJECTS
+================================= */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    padding: 20px;
+    border: 1px solid #27ffe6;
+    background: rgba(255,0,0,0.05);
+    box-shadow: 0 0 15px #27ffe6;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px #27ffe6;
+}
+
+/* ===============================
+   CONTACT
+================================= */
+
+.contact-box {
+    padding: 20px;
+    background: rgba(255,0,0,0.05);
+    border: 1px solid blue;
+    box-shadow: 0 0 18px #27ffe6;
+    border-radius: 6px;
+}
+
+.contact-box a {
+    color: red;
+    text-shadow: 0 0 6px #27ffe6;
+}
+
+.profile-pic-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    border: 3px solid #27ffe6;
+    box-shadow: 0 0 25px #27ffe6;
+    overflow: hidden;
+    position: relative;
+    animation: glow 2s infinite alternate;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%) contrast(120%);
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 15px #27ffe6; }
+    50% { box-shadow: 0 0 25px #0000FF; }
+    100% { box-shadow: 0 0 15px #27ffe6; }
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 5% auto;
+    box-shadow: 0 0 25px #27ffe6;
+    border: 2px solid #27ffe6;
+    border-radius: 6px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: blue;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 10px #27ffe6;
+}
+
+.instruction-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #27ffe6; /* #27ffe6 text color */
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}

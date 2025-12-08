@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About • MOUNT FUJI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script>
+document.getElementById("login-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if(username === "nilo" && password === "masternilo"){
+        alert("Access Granted! Welcome, MOUNT FUJI!");
+    } else {
+        alert("Access Denied! Check your username/password.");
+    }
+});
+
+// Demo Forgot Password
+document.getElementById("forgot-btn").addEventListener("click", function(){
+    alert("Forgot Password clicked!\nSince this is a demo, no email will be sent.");
+});
+
+// Demo Sign Up
+document.getElementById("signup-btn").addEventListener("click", function(){
+    alert("Create New Account clicked!\nThis is a demo signup page.");
+});
+</script>
+
+
+<body>
+
+<div id="preloader">
+    <div class="loader-text">LOADING</div>
+    <div class="loader-bar"></div>
+</div>
+
+<canvas id="particles"></canvas>
+
+<header>
+    <h1 class="logo">MASTER NILO'S CREAION</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <button id="logoutBtn" class="btn-logout">Logout</button>
+    </nav>
+</header>
+
+<section class="content">
+    <h2 class="cyber-title">About Me</h2>
+
+    <p class="bio">
+        I enjoy coding, breaking things, and fixing them again usually while questioning my life choices. I love experimenting, learning from my mistakes, and building websites that look awesome… and occasionally a little unhinged.   </p>
+
+    <h3 class="cyber-sub">Skills</h3>
+    <ul class="list">
+        <li>Basic Programming</li>
+        <li>Basic Debugging</li>
+        <li>Problem Solving</li>
+        <li>Choreograph</li>
+        <li>Computer Troubleshooting</li>
+    </ul>
+
+    <h3 class="cyber-sub">Interests</h3>
+    <ul class="list">
+        <li>Online Gaming</li>
+        <li>Music</li>
+        <li>Travel</li>
+        <li>Dancing</li>
+        <li>Arts</li>
+    </ul>
+
+</section>
+
+<script src="js/auth.js"></script>
+<script src="js/particles.js"></script>
+
+<script>
+window.addEventListener("load", () => {
+    const pre = document.getElementById("preloader");
+    pre.style.opacity = "0";
+    setTimeout(() => { pre.style.display = "none"; }, 600);
+});
+</script>
+
+
+</body>
+</html>
